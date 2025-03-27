@@ -95,7 +95,7 @@ async def receive_whatsapp_message(
                     "knowledge_base": "Aura Agent",
                     "chat": CHAT_ID
                 },
-                timeout=30  # Railway allows longer, adjust as needed
+                timeout=120  # Railway allows longer, adjust as needed
             )
 
         if response.status_code != 200:
