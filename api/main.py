@@ -18,6 +18,17 @@ SUPABASE_CHAT_API = os.getenv("SUPABASE_CHAT_API")
 PUBLIC_SUPABASE_ANON_KEY = os.getenv("PUBLIC_SUPABASE_ANON_KEY")
 CHAT_ID = os.getenv("CHAT_ID")
 
+
+print("✅ ENV CHECK:", {
+    "SUPABASE_URL": SUPABASE_URL,
+    "SUPABASE_EMAIL": SUPABASE_EMAIL,
+    "SUPABASE_PASSWORD": SUPABASE_PASSWORD,
+    "SUPABASE_CHAT_API": SUPABASE_CHAT_API,
+    "PUBLIC_SUPABASE_ANON_KEY": PUBLIC_SUPABASE_ANON_KEY,
+    "CHAT_ID": CHAT_ID
+})
+
+
 required_envs = [SUPABASE_URL, SUPABASE_EMAIL, SUPABASE_PASSWORD, SUPABASE_CHAT_API]
 if not all(required_envs):
     raise RuntimeError("❌ Missing one or more required Supabase environment variables.")
